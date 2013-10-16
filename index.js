@@ -11,7 +11,7 @@ module.exports = function(builder) {
 
     // Get all the coffee files from the scripts list
     var sassfiles = pkg.config.styles.filter(function(file){
-      return path.extname(file) === '.scss';
+      return ['.scss', '.sass'].indexOf(path.extname(file)) > -1;
     });
 
     // No sass files
